@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 
 import os
 from urllib import parse
@@ -24,3 +24,14 @@ def index():
 @app.route('/post/<int:post_id>')
 def integercillo(post_id):
     return "integercillo squared = {}".format(post_id**2)
+
+#postear con formato:
+#https://embebidos-bpm.herokuapp.com/upload?asdf=1&qwerty=2
+@app.route('/upload', methods=['GET'])
+def printVars():
+    s = '{\n'
+    for k, v in request.args:
+        s += '  {}: {},'.format(k, v)
+    s = s[:-1]
+    s += '\n}'
+    return s
