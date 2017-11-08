@@ -30,7 +30,7 @@ def integercillo(post_id):
 @app.route('/upload', methods=['GET'])
 def printVars():
     s = '{\n'
-    for k, v in request.args:
+    for k, v in request.args.items():
         s += '  {}: {},'.format(k, v)
     s = s[:-1]
     s += '\n}'
