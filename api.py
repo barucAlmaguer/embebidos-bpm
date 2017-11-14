@@ -21,17 +21,23 @@ app = Flask(__name__)
 def index():
     return "Embebidos BMP"
 
+
+#-----------------FUNCION CHIDA---------------
 @app.route('/static/<path:filename>')
 def download_file(filename):
     return send_from_directory('static', filename)
 
+
+@app.route('/alison/<path:filename>')
+def paginilla_alison(filename):
+    return send_from_directory('alison', filename)
+
+#-----------------FIN FUNCION CHIDA---------------
+
+
 @app.route('/post/<int:post_id>')
 def integercillo(post_id):
     return "integercillo squared = {}".format(post_id**2)
-
-@app.route('/Alison')
-def funcionAlison():
-    return "UVU"
 
 #postear con formato:
 #https://embebidos-bpm.herokuapp.com/upload?asdf=1&qwerty=2

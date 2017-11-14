@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="images/favicon.ico">
+    
+    <title>Sistemas Embebidos I</title>
+    
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="js/jquery-ui.css" />
+     
+    <link rel="stylesheet" href="js/grid-2.2.0/pqgrid.min.css" />
+</head>
+
+<body>
+    <main>
+
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-default" style="background: white;">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-menu" aria-expanded="false">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div id="logo">
+                            <img src="images/logo.jpg" alt="medihere Logo" title="medihere">
+                        </div>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="header-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li class="active"><a class="active" href="login.html">Iniciar Sesión</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="text-center">
+            <h1>Iniciar Sesión</h1>
+            <p>Inicia sesión con tu Doctor ID para el seguimiento en tiempo real de tus pacientes VIP.</p>
+        </section>
+
+        <section>
+            <div class="container">
+                <div>
+                    <span>Inicio | Iniciar Sesión</span>
+                </div>
+                <br>
+            </div>
+        </section>
+        
+        <section>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Error</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Doctor ID o contraseña incorrectos.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section>
+            <div class="row text-center">
+                <div class="container">
+                    <div class="row">
+                        <div style="text-align: center; margin: 24px 0 12px 0;">
+                            <img src="images/doctor-pp.png" alt="Avatar" class="avatar">
+                            <br><br>
+                            <div class="form-group" style="width: 30%; margin: auto;">
+                                <input class="form-control" id="doctorID" type="text" placeholder="Doctor ID" required>
+                                <br>
+                                <input class="form-control" id="pass" type="password" placeholder="Contraseña" required>
+                                <br>
+                                <input class="btn btn-default" type="submit" value="Entrar" onclick="checkLogin();" data-toggle="modal" data-target="#myModal">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <br>
+            <div class="text-center">
+                <p>Copyright &copy; 2017 Medihere. Todos los derechos reservados</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script> 
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="js/grid-2.2.0/pqgrid.min.js" ></script>  
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
