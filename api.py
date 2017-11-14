@@ -25,6 +25,10 @@ def index():
 def integercillo(post_id):
     return "integercillo squared = {}".format(post_id**2)
 
+@app.route('/Alison')
+def integercillo(post_id):
+    return "UVU"
+
 #postear con formato:
 #https://embebidos-bpm.herokuapp.com/upload?asdf=1&qwerty=2
 @app.route('/upload', methods=['GET'])
