@@ -33,6 +33,23 @@ def download_file(filename):
 def paginilla_alison(filename):
     return send_from_directory('alison', filename)
 
+#guardadora en la BD
+@app.route('/arduino/<int:value>')
+def logging(value):
+    cur = conn.cursor()
+    cur.execute("INSERT into simple (valor) values ({});".format(value))
+    conn.commit()
+    return "dato posteado: {}".format(value)
+
+#lectora de la BD
+@app.route('/simple/')
+def simple():
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM simple;")
+    for row in cur:
+        print(row)
+    return "holi"
+    
 #-----------------FIN FUNCION CHIDA---------------
 
 
