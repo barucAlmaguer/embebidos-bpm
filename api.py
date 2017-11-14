@@ -26,7 +26,7 @@ def integercillo(post_id):
     return "integercillo squared = {}".format(post_id**2)
 
 @app.route('/Alison')
-def integercillo(post_id):
+def funcionAlison():
     return "UVU"
 
 #postear con formato:
