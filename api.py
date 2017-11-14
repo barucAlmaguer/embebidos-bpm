@@ -21,6 +21,10 @@ app = Flask(__name__)
 def index():
     return "Embebidos BMP"
 
+@app.route('/static/<path:filename>')
+def download_file(filename):
+    return send_from_directory('static', filename)
+
 @app.route('/post/<int:post_id>')
 def integercillo(post_id):
     return "integercillo squared = {}".format(post_id**2)
