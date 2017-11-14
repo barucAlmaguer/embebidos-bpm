@@ -2,3 +2,5 @@ bmp-env/
 *.env
 __pycache__
 embebidos-bpm/*
+*.pyc
+venv-embebidos
