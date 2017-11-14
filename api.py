@@ -47,12 +47,15 @@ def logging(value):
 def simple():
     cur = conn.cursor()
     cur.execute("SELECT * FROM simple;")
-    dic = {}
+    lista = []
     for row in cur:
+        dic = {}
         k = row[0]
         v = row[1]
-        dic[k] = v
-    return jsonify(dic)
+        dic['id'] = k
+        dic['valor'] = v
+        lista.append(dic)
+    return jsonify(lista)
     
 #-----------------FIN FUNCION CHIDA---------------
 
