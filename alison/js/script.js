@@ -9,6 +9,8 @@ function checkLogin() {
 }
 
 $(function () {
+    alert("holi");
+
     let fecha = Date();
     fecha = fecha.split(' ');
     let hora = fecha[4] + fecha[5] + fecha[6] + fecha[7];
