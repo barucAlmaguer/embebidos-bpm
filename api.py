@@ -1,5 +1,6 @@
 from flask import Flask, request
 from flask import send_from_directory
+from flask import jsonify
 
 import os
 from urllib import parse
@@ -46,9 +47,12 @@ def logging(value):
 def simple():
     cur = conn.cursor()
     cur.execute("SELECT * FROM simple;")
+    dic = {}
     for row in cur:
-        print(row)
-    return "holi"
+        k = row[0]
+        v = row[1]
+        dic[k] = v
+    return jsonify(dic)
     
 #-----------------FIN FUNCION CHIDA---------------
 
